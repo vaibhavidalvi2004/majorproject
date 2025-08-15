@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { History as HistoryIcon, Calendar, CircleAlert as AlertCircle, CircleCheck as CheckCircle, TrendingUp, Filter } from 'lucide-react-native';
 import { DetectionService } from '@/services/DetectionService';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useFocusEffect } from '@react-navigation/native';
 
 export default function HistoryTab() {
   const [detections, setDetections] = useState<any[]>([]);
   const [filterType, setFilterType] = useState<'all' | 'disease' | 'pest'>('all');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    loadDetectionHistory();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      loadDetectionHistory();
+    }, [])
+  );
 
   const loadDetectionHistory = async () => {
     setIsLoading(true);
@@ -25,53 +29,7 @@ export default function HistoryTab() {
     }
   };
 
-  // Mock data for demonstration since getDetectionHistory returns empty array
-  const mockDetections = [
-    {
-      id: '1',
-      timestamp: Date.now() - 86400000, // 1 day ago
-      type: 'disease',
-      crop: 'tomato',
-      result: {
-        name: 'early blight',
-        scientific_name: 'Alternaria solani',
-        severity: 'Medium',
-        confidence: 85,
-        description: 'Early blight is a common fungal disease affecting tomatoes.',
-      },
-      image: 'https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      id: '2',
-      timestamp: Date.now() - 172800000, // 2 days ago
-      type: 'pest',
-      crop: 'pepper',
-      result: {
-        name: 'aphids',
-        scientific_name: 'Aphidoidea',
-        severity: 'Low',
-        confidence: 92,
-        description: 'Small insects that feed on plant sap.',
-      },
-      image: 'https://images.pexels.com/photos/1407305/pexels-photo-1407305.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      id: '3',
-      timestamp: Date.now() - 259200000, // 3 days ago
-      type: 'disease',
-      crop: 'corn',
-      result: {
-        name: 'leaf rust',
-        scientific_name: 'Puccinia sorghi',
-        severity: 'High',
-        confidence: 78,
-        description: 'Fungal disease causing rust-colored pustules on leaves.',
-      },
-      image: 'https://images.pexels.com/photos/2518861/pexels-photo-2518861.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-  ];
-
-  const displayDetections = detections.length > 0 ? detections : mockDetections;
+  const displayDetections = detections;
   const filteredDetections = filterType === 'all' 
     ? displayDetections 
     : displayDetections.filter(detection => detection.type === filterType);
@@ -110,13 +68,19 @@ export default function HistoryTab() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <HistoryIcon size={24} color="#16a34a" />
+      <LinearGradient
+        colors={['#16a34a', '#22c55e']}
+        style={styles.header}
+      >
+        <HistoryIcon size={24} color="#ffffff" />
         <Text style={styles.headerTitle}>Detection History</Text>
-      </View>
+      </LinearGradient>
 
       {/* Stats Overview */}
-      <View style={styles.statsContainer}>
+      <LinearGradient
+        colors={['#ffffff', '#f8fafc']}
+        style={styles.statsContainer}
+      >
         <View style={styles.statItem}>
           <Text style={styles.statValue}>{stats.total}</Text>
           <Text style={styles.statLabel}>Total Scans</Text>
@@ -133,33 +97,63 @@ export default function HistoryTab() {
           <Text style={styles.statValue}>{stats.highSeverity}</Text>
           <Text style={styles.statLabel}>Critical</Text>
         </View>
-      </View>
+      </LinearGradient>
 
       {/* Filter Buttons */}
       <View style={styles.filterContainer}>
         <TouchableOpacity
-          style={[styles.filterButton, filterType === 'all' && styles.filterButtonActive]}
+          style={[
+            styles.filterButton, 
+            filterType === 'all' && styles.filterButtonActive
+          ]}
           onPress={() => setFilterType('all')}
         >
-          <Text style={[styles.filterText, filterType === 'all' && styles.filterTextActive]}>
-            All
-          </Text>
+          {filterType === 'all' ? (
+            <LinearGradient
+              colors={['#16a34a', '#22c55e']}
+              style={styles.activeFilterGradient}
+            >
+              <Text style={styles.filterTextActive}>All</Text>
+            </LinearGradient>
+          ) : (
+            <Text style={styles.filterText}>All</Text>
+          )}
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.filterButton, filterType === 'disease' && styles.filterButtonActive]}
+          style={[
+            styles.filterButton, 
+            filterType === 'disease' && styles.filterButtonActive
+          ]}
           onPress={() => setFilterType('disease')}
         >
-          <Text style={[styles.filterText, filterType === 'disease' && styles.filterTextActive]}>
-            Diseases
-          </Text>
+          {filterType === 'disease' ? (
+            <LinearGradient
+              colors={['#16a34a', '#22c55e']}
+              style={styles.activeFilterGradient}
+            >
+              <Text style={styles.filterTextActive}>Diseases</Text>
+            </LinearGradient>
+          ) : (
+            <Text style={styles.filterText}>Diseases</Text>
+          )}
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.filterButton, filterType === 'pest' && styles.filterButtonActive]}
+          style={[
+            styles.filterButton, 
+            filterType === 'pest' && styles.filterButtonActive
+          ]}
           onPress={() => setFilterType('pest')}
         >
-          <Text style={[styles.filterText, filterType === 'pest' && styles.filterTextActive]}>
-            Pests
-          </Text>
+          {filterType === 'pest' ? (
+            <LinearGradient
+              colors={['#16a34a', '#22c55e']}
+              style={styles.activeFilterGradient}
+            >
+              <Text style={styles.filterTextActive}>Pests</Text>
+            </LinearGradient>
+          ) : (
+            <Text style={styles.filterText}>Pests</Text>
+          )}
         </TouchableOpacity>
       </View>
 
@@ -174,7 +168,11 @@ export default function HistoryTab() {
           </View>
         ) : (
           filteredDetections.map((detection, index) => (
-            <View key={detection.id || index} style={styles.detectionCard}>
+            <LinearGradient
+              key={detection.id || index}
+              colors={['#ffffff', '#f8fafc']}
+              style={styles.detectionCard}
+            >
               <Image source={{ uri: detection.image }} style={styles.detectionImage} />
               
               <View style={styles.detectionInfo}>
@@ -206,7 +204,7 @@ export default function HistoryTab() {
                   {detection.result.description}
                 </Text>
               </View>
-            </View>
+            </LinearGradient>
           ))
         )}
       </ScrollView>
@@ -217,37 +215,37 @@ export default function HistoryTab() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f9fafb',
+    backgroundColor: '#f8fafc',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingVertical: 16,
-    backgroundColor: '#ffffff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e5e7eb',
+    paddingVertical: 20,
+    paddingTop: 16,
   },
   headerTitle: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#1f2937',
+    color: '#ffffff',
     marginLeft: 12,
   },
   statsContainer: {
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
     paddingHorizontal: 20,
     paddingVertical: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e5e7eb',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   statItem: {
     flex: 1,
     alignItems: 'center',
   },
   statValue: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: '700',
     color: '#1f2937',
   },
@@ -255,7 +253,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#6b7280',
     marginTop: 4,
-    fontWeight: '500',
+    fontWeight: '600',
   },
   filterContainer: {
     flexDirection: 'row',
@@ -264,22 +262,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   filterButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     borderRadius: 20,
     marginRight: 8,
-    backgroundColor: '#f3f4f6',
+    backgroundColor: '#f1f5f9',
+    overflow: 'hidden',
   },
   filterButtonActive: {
-    backgroundColor: '#16a34a',
+    padding: 0,
+  },
+  activeFilterGradient: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
   },
   filterText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4b5563',
+    color: '#64748b',
   },
   filterTextActive: {
     color: '#ffffff',
+    fontSize: 14,
+    fontWeight: '600',
   },
   listContainer: {
     flex: 1,
@@ -306,16 +312,15 @@ const styles = StyleSheet.create({
   },
   detectionCard: {
     flexDirection: 'row',
-    backgroundColor: '#ffffff',
     marginHorizontal: 16,
     marginVertical: 8,
-    borderRadius: 12,
+    borderRadius: 16,
     overflow: 'hidden',
+    elevation: 3,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 3,
   },
   detectionImage: {
     width: 100,

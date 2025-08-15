@@ -3,6 +3,7 @@ import axios from "axios";
 import * as FileSystem from "expo-file-system";
 import localKnowledgeBaseJson from "../data/detectionData.json";
 import { Buffer } from "buffer";
+import { StorageService, DetectionRecord } from "./StorageService";
 
 // Polyfill Buffer for React Native
 if (typeof global.Buffer === 'undefined') {
@@ -39,7 +40,7 @@ const HUGGINGFACE_API_KEY = "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";
 
 // Models
 const DISEASE_MODEL = "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification";
-const PEST_MODEL = "muddassir00/plant-pest-classification";
+const PEST_MODEL = "keremberke/yolov8n-plant-pest-detection";
 
 // Helper: wait function for retry delay
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -404,6 +405,9 @@ export class DetectionService {
         },
       };
 
+      // Save detection to storage
+      await StorageService.saveDetection(result as DetectionRecord);
+
       return result;
 
     } catch (error: any) {
@@ -434,9 +438,11 @@ export class DetectionService {
   }
 
   static async getDetectionHistory(): Promise<any[]> {
-    // TODO: Implement persistent storage using AsyncStorage or SQLite
-    console.log("getDetectionHistory called - implement persistent storage");
-    return [];
+    return await StorageService.getDetections();
+  }
+
+  static async getAppStats() {
+    return await StorageService.getStats();
   }
 
   static getSeverityColor(severity: string | undefined | null): string {

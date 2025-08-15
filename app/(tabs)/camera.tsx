@@ -112,7 +112,7 @@ export default function CameraTab() {
       );
       setAnalysisResult(result);
     } catch (error: any) {
-      Alert.alert('Analysis Failed', error.message || 'Please try again');
+      Alert.alert('Analysis Failed', error.message || 'Please try again with a clearer image');
       console.error(error);
     } finally {
       setIsAnalyzing(false);

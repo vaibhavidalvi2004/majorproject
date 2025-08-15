@@ -36,7 +36,7 @@ type LocalKnowledgeBase = {
 const localKnowledgeBase: LocalKnowledgeBase = localKnowledgeBaseJson;
 
 // ------------------- Config -------------------
-const HUGGINGFACE_API_KEY = "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";
+const HUGGINGFACE_API_KEY = "YOUR_HUGGING_FACE_API_KEY_HERE";
 
 // Models
 const DISEASE_MODEL = "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification";

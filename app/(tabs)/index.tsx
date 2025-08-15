@@ -12,10 +12,10 @@ export default function HomeTab() {
   };
 
   const quickStats = [
-    { title: 'Recent Scans', value: '12', color: '#16a34a', icon: Camera },
-    { title: 'Healthy Plants', value: '8', color: '#10b981', icon: Leaf },
-    { title: 'Issues Found', value: '4', color: '#ea580c', icon: AlertTriangle },
-    { title: 'Growth Rate', value: '+15%', color: '#3b82f6', icon: TrendingUp },
+    { title: 'Recent Scans', value: '0', color: '#16a34a', icon: Camera },
+    { title: 'Healthy Plants', value: '0', color: '#10b981', icon: Leaf },
+    { title: 'Issues Found', value: '0', color: '#ea580c', icon: AlertTriangle },
+    { title: 'Growth Rate', value: '0', color: '#3b82f6', icon: TrendingUp },
   ];
 
   return (

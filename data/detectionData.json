@@ -1,0 +1,558 @@
+{
+  "unknown": {
+    "scientific_name": "Unknown species",
+    "severity": "Medium",
+    "description": "This appears to be an unidentified plant issue. The symptoms are visible but require further analysis for proper identification. Consider consulting with a local agricultural expert or extension service for accurate diagnosis and treatment recommendations.",
+    "symptoms": [
+      "Visible abnormal symptoms detected",
+      "May cause plant stress and reduced vigor",
+      "Could potentially spread to other plants",
+      "Unclear symptom pattern requiring professional assessment"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Neem oil spray",
+          "dosage": "5-10 ml per liter of water",
+          "frequency": "Every 7-10 days",
+          "safety": "Safe for beneficial insects when applied in evening. Avoid spraying during peak sun hours."
+        },
+        {
+          "name": "Baking soda solution",
+          "dosage": "1 teaspoon per liter of water",
+          "frequency": "Every 5-7 days",
+          "safety": "Test on small area first. May cause leaf burn in hot weather."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Copper-based fungicide",
+          "dosage": "Follow manufacturer instructions",
+          "frequency": "As per label directions",
+          "safety": "Wear protective equipment. Avoid spraying during bloom period."
+        }
+      ],
+      "preventive": [
+        "Monitor plant regularly for symptom changes",
+        "Maintain good air circulation around plants",
+        "Avoid overhead watering to reduce humidity",
+        "Remove affected plant parts immediately",
+        "Practice proper sanitation between plants",
+        "Ensure adequate plant spacing"
+      ]
+    },
+    "aliases": ["unidentified", "unclear", "uncertain"],
+    "affected_crops": ["all"],
+    "environmental_factors": ["varies"],
+    "spread_rate": "unknown"
+  },
+  "early blight": {
+    "scientific_name": "Alternaria solani",
+    "severity": "Medium",
+    "description": "Early blight is a common fungal disease that primarily affects solanaceous plants like tomatoes, potatoes, and eggplants. It causes characteristic dark spots with concentric rings on leaves, typically starting from the bottom of the plant and moving upward.",
+    "symptoms": [
+      "Dark brown to black spots with concentric rings (target-like pattern)",
+      "Yellowing and premature dropping of older, lower leaves",
+      "Dark, sunken lesions on stems and branches",
+      "Leathery, dark spots on fruits with concentric rings",
+      "Reduced plant vigor and stunted growth"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Copper fungicide",
+          "dosage": "1-2 tablespoons per gallon of water",
+          "frequency": "Every 7-14 days",
+          "safety": "Avoid spraying during bloom to protect pollinators. Apply in early morning or evening."
+        },
+        {
+          "name": "Baking soda spray",
+          "dosage": "1 tablespoon per gallon of water + 1/2 tsp liquid soap",
+          "frequency": "Every 7 days",
+          "safety": "Test on small area first. May cause leaf burn in temperatures above 85°F."
+        },
+        {
+          "name": "Compost tea",
+          "dosage": "Dilute 1:10 with water",
+          "frequency": "Weekly",
+          "safety": "Completely safe. Apply as foliar spray or soil drench."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Chlorothalonil",
+          "dosage": "Follow label instructions (typically 1-2 tsp per quart)",
+          "frequency": "Every 7-14 days",
+          "safety": "Wear full protective equipment. Avoid drift to water sources. Do not apply within 7 days of harvest."
+        },
+        {
+          "name": "Mancozeb",
+          "dosage": "Follow label directions",
+          "frequency": "Every 10-14 days",
+          "safety": "Highly toxic. Use protective equipment. Pre-harvest interval varies by crop."
+        }
+      ],
+      "preventive": [
+        "Space plants adequately for good air circulation",
+        "Water at soil level using drip irrigation or soaker hoses",
+        "Remove and destroy infected plant debris at end of season",
+        "Rotate crops annually (avoid solanaceous plants in same location)",
+        "Apply organic mulch to prevent soil splashing onto leaves",
+        "Choose resistant varieties when available",
+        "Maintain consistent soil moisture to reduce plant stress"
+      ]
+    },
+    "aliases": ["alternaria blight", "target spot", "collar rot"],
+    "affected_crops": ["tomato", "potato", "eggplant", "pepper", "tobacco"],
+    "environmental_factors": ["warm temperatures (75-85°F)", "high humidity", "leaf wetness"],
+    "spread_rate": "moderate"
+  },
+  "late blight": {
+    "scientific_name": "Phytophthora infestans",
+    "severity": "High",
+    "description": "Late blight is a devastating oomycete disease that can destroy entire tomato and potato crops within days under favorable conditions. This is the same disease that caused the Irish Potato Famine. It thrives in cool, wet conditions and spreads rapidly through airborne spores.",
+    "symptoms": [
+      "Water-soaked, dark green to brown spots on leaves",
+      "White, fuzzy sporangial growth on undersides of leaves",
+      "Rapid expansion of lesions during humid conditions",
+      "Black, firm rot on fruits starting from the stem end",
+      "Brown to black lesions on stems and petioles",
+      "Complete plant collapse in severe cases",
+      "Distinctive musty odor from infected tissues"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Copper hydroxide",
+          "dosage": "2-4 tablespoons per gallon of water",
+          "frequency": "Every 5-7 days during favorable disease conditions",
+          "safety": "Apply early morning or evening to reduce phytotoxicity. Copper can accumulate in soil over time."
+        },
+        {
+          "name": "Potassium bicarbonate",
+          "dosage": "1 tablespoon per gallon + spreader sticker",
+          "frequency": "Every 5-7 days",
+          "safety": "Generally safe but may cause leaf burn on sensitive plants in hot weather."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Mancozeb + Copper",
+          "dosage": "Follow label directions strictly",
+          "frequency": "Every 7-10 days preventively, every 5-7 days if disease present",
+          "safety": "Highly toxic. Full protective equipment required. Toxic to fish and aquatic life."
+        },
+        {
+          "name": "Chlorothalonil + Propamocarb",
+          "dosage": "As per manufacturer guidelines",
+          "frequency": "Alternate with other fungicides to prevent resistance",
+          "safety": "Professional application recommended. Observe pre-harvest intervals."
+        }
+      ],
+      "preventive": [
+        "Plant certified disease-free seed potatoes and transplants",
+        "Choose resistant or tolerant varieties when available",
+        "Ensure excellent drainage and avoid overhead irrigation",
+        "Monitor weather conditions - disease favors 60-70°F with high humidity",
+        "Remove all infected plant material immediately and destroy",
+        "Avoid working in fields when plants are wet",
+        "Apply preventive fungicide sprays before disease symptoms appear",
+        "Maintain wide plant spacing for air circulation",
+        "Remove volunteer potato plants and nightshade weeds"
+      ]
+    },
+    "aliases": ["potato blight", "tomato blight", "phytophthora"],
+    "affected_crops": ["tomato", "potato", "pepper", "eggplant"],
+    "environmental_factors": ["cool temperatures (60-70°F)", "high humidity (>90%)", "leaf wetness >10 hours"],
+    "spread_rate": "very rapid"
+  },
+  "powdery mildew": {
+    "scientific_name": "Erysiphe cichoracearum",
+    "severity": "Medium",
+    "description": "Powdery mildew is a widespread fungal disease that affects many plant species. It appears as white, powdery patches on leaves and stems, thriving in warm, dry conditions with high humidity. Unlike many fungal diseases, it doesn't require water on leaf surfaces to germinate.",
+    "symptoms": [
+      "White to gray powdery coating on leaf surfaces",
+      "Initial spots on upper leaf surfaces that expand and merge",
+      "Yellowing and curling of affected leaves",
+      "Stunted plant growth and reduced vigor",
+      "Premature leaf drop in severe infections",
+      "Reduced fruit quality and yield",
+      "Powdery growth may also appear on stems and flowers"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Milk spray",
+          "dosage": "1 part milk to 9 parts water",
+          "frequency": "Weekly applications",
+          "safety": "Completely safe for humans and beneficial insects. May attract beneficial microorganisms."
+        },
+        {
+          "name": "Potassium bicarbonate",
+          "dosage": "1 tablespoon per gallon + 1/2 tsp horticultural oil",
+          "frequency": "Every 7-10 days",
+          "safety": "Generally safe. Avoid application during hot, sunny conditions to prevent leaf burn."
+        },
+        {
+          "name": "Sulfur dust or spray",
+          "dosage": "Follow product instructions",
+          "frequency": "Every 7-14 days",
+          "safety": "Do not apply when temperatures exceed 85°F. Can be irritating to skin and eyes."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Myclobutanil",
+          "dosage": "Follow manufacturer instructions carefully",
+          "frequency": "Every 14 days, rotate with other modes of action",
+          "safety": "Toxic to fish and aquatic invertebrates. Avoid application before rain."
+        },
+        {
+          "name": "Propiconazole",
+          "dosage": "As per label directions",
+          "frequency": "Every 14-21 days",
+          "safety": "Wear protective equipment. Do not exceed maximum applications per season."
+        }
+      ],
+      "preventive": [
+        "Plant resistant or tolerant varieties when available",
+        "Provide good air circulation through proper spacing",
+        "Avoid overhead watering; use drip irrigation",
+        "Avoid excessive nitrogen fertilization which promotes susceptible growth",
+        "Remove and destroy infected leaves promptly",
+        "Clean up plant debris at end of growing season",
+        "Monitor humidity levels in greenhouse environments",
+        "Ensure adequate sunlight reaches plant canopy"
+      ]
+    },
+    "aliases": ["white mold", "powdery fungus"],
+    "affected_crops": ["cucumbers", "squash", "pumpkin", "melon", "zucchini", "roses", "grapes"],
+    "environmental_factors": ["warm days (70-80°F)", "cool nights", "high humidity", "poor air circulation"],
+    "spread_rate": "moderate to fast"
+  },
+  "aphids": {
+    "scientific_name": "Aphidoidea",
+    "severity": "Low",
+    "description": "Aphids are small, soft-bodied insects that feed on plant sap by inserting their needle-like mouthparts into plant tissues. They reproduce rapidly and can quickly establish large colonies. They also vector many plant viruses, making their control important beyond direct feeding damage.",
+    "symptoms": [
+      "Small, soft-bodied insects clustered on new growth and leaf undersides",
+      "Sticky honeydew secretions on leaves and surrounding surfaces",
+      "Curled, distorted, or yellowing leaves",
+      "Stunted plant growth and reduced vigor",
+      "Presence of ants farming aphids for honeydew",
+      "Sooty mold growing on honeydew deposits",
+      "Transmission of viral diseases between plants"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Insecticidal soap",
+          "dosage": "2-3 tablespoons per gallon of water",
+          "frequency": "Every 3-5 days until control achieved",
+          "safety": "Safe for beneficial insects once dry. Test on small area first for sensitive plants."
+        },
+        {
+          "name": "Neem oil",
+          "dosage": "1-2 tablespoons per gallon with emulsifier",
+          "frequency": "Every 7 days",
+          "safety": "Apply in evening to protect pollinators. May cause phytotoxicity on some plants in hot weather."
+        },
+        {
+          "name": "Ladybug release",
+          "dosage": "1500-3000 adults per average garden",
+          "frequency": "One-time release when aphids first appear",
+          "safety": "Completely safe biological control. Pre-chill beetles and release in evening."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Imidacloprid (soil drench)",
+          "dosage": "Follow label instructions precisely",
+          "frequency": "One application provides 6-8 weeks control",
+          "safety": "Highly toxic to bees and other pollinators. Do not apply to flowering plants or when bees are active."
+        },
+        {
+          "name": "Pyrethrin spray",
+          "dosage": "As per product label",
+          "frequency": "Every 3-5 days as needed",
+          "safety": "Low toxicity to mammals. Highly toxic to fish. Apply in evening to reduce bee exposure."
+        }
+      ],
+      "preventive": [
+        "Encourage beneficial insects with diverse plantings",
+        "Use reflective aluminum mulch to deter aphids",
+        "Monitor plants weekly, especially new growth",
+        "Remove weeds that serve as alternate hosts",
+        "Avoid over-fertilizing with nitrogen which promotes succulent growth",
+        "Use row covers on young plants during peak aphid seasons",
+        "Plant trap crops like nasturtiums to attract aphids away from main crops",
+        "Maintain proper plant spacing for good air circulation"
+      ]
+    },
+    "aliases": ["plant lice", "greenfly", "blackfly"],
+    "affected_crops": ["most vegetables", "fruits", "ornamentals", "grains"],
+    "environmental_factors": ["warm weather", "drought stress", "high nitrogen levels"],
+    "spread_rate": "very rapid reproduction"
+  },
+  "spider mites": {
+    "scientific_name": "Tetranychus urticae",
+    "severity": "Medium",
+    "description": "Spider mites are tiny arachnids that feed on plant cells by piercing leaf tissues and sucking out contents. They thrive in hot, dry conditions and can rapidly build up populations. Their feeding causes stippling damage and they produce fine webbing on heavily infested plants.",
+    "symptoms": [
+      "Fine silken webbing on leaves, stems, and growing tips",
+      "Yellow or bronze stippling on leaf surfaces",
+      "Leaves turning yellow, bronze, or brown",
+      "Tiny moving specks on undersides of leaves",
+      "Premature leaf drop and defoliation",
+      "Reduced plant vigor and growth",
+      "Dusty appearance on leaf surfaces"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Predatory mites (Phytoseiulus persimilis)",
+          "dosage": "2-5 predatory mites per spider mite",
+          "frequency": "One release when mites first detected",
+          "safety": "Completely safe biological control. Effective in greenhouse and outdoor conditions."
+        },
+        {
+          "name": "Horticultural oil",
+          "dosage": "1-2% solution (2-4 tablespoons per gallon)",
+          "frequency": "Every 7-10 days for 3 applications",
+          "safety": "Apply during cooler temperatures (below 85°F) to avoid plant damage. Test on small area first."
+        },
+        {
+          "name": "Diatomaceous earth (food grade)",
+          "dosage": "Light dusting on affected plants",
+          "frequency": "Every 5-7 days",
+          "safety": "Safe for beneficial insects. Apply when no wind. Wear dust mask during application."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Bifenthrin",
+          "dosage": "Follow label directions exactly",
+          "frequency": "Every 7-14 days, maximum 4 applications per season",
+          "safety": "Highly toxic to bees, fish, and aquatic invertebrates. Do not apply during bloom or near water sources."
+        },
+        {
+          "name": "Abamectin",
+          "dosage": "As per manufacturer guidelines",
+          "frequency": "Every 7-10 days for 2-3 applications",
+          "safety": "Moderately toxic. Avoid drift to non-target areas. Allow re-entry interval before harvesting."
+        }
+      ],
+      "preventive": [
+        "Maintain adequate humidity levels (50-60%)",
+        "Avoid dusty conditions around plants",
+        "Regular forceful water spraying to dislodge mites",
+        "Remove heavily infested leaves promptly",
+        "Plant diverse crops to encourage natural predators",
+        "Avoid over-fertilizing with nitrogen",
+        "Use reflective mulches to reduce heat buildup",
+        "Monitor plants regularly, especially during hot, dry periods"
+      ]
+    },
+    "aliases": ["two-spotted spider mite", "red spider mite", "webbing mites"],
+    "affected_crops": ["tomatoes", "peppers", "cucumbers", "beans", "strawberries", "ornamentals"],
+    "environmental_factors": ["hot temperatures (80-90°F)", "low humidity", "drought stress", "dusty conditions"],
+    "spread_rate": "very rapid in favorable conditions"
+  },
+  "bacterial spot": {
+    "scientific_name": "Xanthomonas vesicatoria",
+    "severity": "High",
+    "description": "Bacterial spot is a serious disease affecting tomatoes and peppers. It causes lesions on leaves, stems, and fruits, and can result in significant yield losses. The bacteria spread through water splash, contaminated tools, and infected seeds.",
+    "symptoms": [
+      "Small, dark brown to black spots on leaves with yellow halos",
+      "Leaf spots may merge causing large necrotic areas",
+      "Dark, raised lesions on fruits",
+      "Defoliation starting with older leaves",
+      "Stem cankers in severe infections",
+      "Reduced fruit quality and marketability"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Copper hydroxide",
+          "dosage": "2-3 tablespoons per gallon",
+          "frequency": "Every 7-10 days",
+          "safety": "Apply during dry conditions. Copper can accumulate in soil over time."
+        },
+        {
+          "name": "Streptomycin (where approved)",
+          "dosage": "Follow label instructions",
+          "frequency": "Every 5-7 days during disease pressure",
+          "safety": "Use only as directed. Resistance can develop with overuse."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Copper + Mancozeb combination",
+          "dosage": "According to manufacturer specifications",
+          "frequency": "Every 7-14 days preventively",
+          "safety": "Full protective equipment required. Observe pre-harvest intervals."
+        }
+      ],
+      "preventive": [
+        "Use certified disease-free seeds and transplants",
+        "Avoid overhead irrigation and work when plants are wet",
+        "Practice crop rotation with non-host plants",
+        "Remove and destroy infected plant debris",
+        "Disinfect tools between plants",
+        "Choose resistant varieties when available",
+        "Maintain proper plant spacing for air circulation"
+      ]
+    },
+    "aliases": ["bacterial speck", "xanthomonas spot"],
+    "affected_crops": ["tomato", "pepper"],
+    "environmental_factors": ["warm temperatures", "high humidity", "leaf wetness"],
+    "spread_rate": "rapid in wet conditions"
+  },
+  "downy mildew": {
+    "scientific_name": "Peronospora destructor",
+    "severity": "Medium",
+    "description": "Downy mildew is an oomycete disease that affects many crops, particularly in cool, wet conditions. It appears as yellow patches on upper leaf surfaces with fuzzy growth underneath.",
+    "symptoms": [
+      "Yellow patches on upper leaf surfaces",
+      "Fuzzy, grayish-white growth on undersides of leaves",
+      "Leaf distortion and curling",
+      "Premature leaf drop",
+      "Stunted plant growth",
+      "Reduced yield and quality"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Copper fungicide",
+          "dosage": "1-2 tablespoons per gallon",
+          "frequency": "Every 7-10 days",
+          "safety": "Apply in dry conditions to reduce phytotoxicity."
+        },
+        {
+          "name": "Bacillus subtilis",
+          "dosage": "Follow product instructions",
+          "frequency": "Weekly applications",
+          "safety": "Completely safe biological fungicide."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Metalaxyl + Mancozeb",
+          "dosage": "As per label directions",
+          "frequency": "Every 7-14 days",
+          "safety": "Use protective equipment. Rotate modes of action."
+        }
+      ],
+      "preventive": [
+        "Improve air circulation around plants",
+        "Avoid overhead watering",
+        "Remove infected plant material",
+        "Plant resistant varieties",
+        "Practice crop rotation",
+        "Monitor humidity levels in greenhouse"
+      ]
+    },
+    "aliases": ["false mildew", "blue mold"],
+    "affected_crops": ["cucumbers", "lettuce", "spinach", "onions", "grapes"],
+    "environmental_factors": ["cool temperatures (50-70°F)", "high humidity", "poor air circulation"],
+    "spread_rate": "rapid in favorable conditions"
+  },
+  "whiteflies": {
+    "scientific_name": "Bemisia tabaci",
+    "severity": "Medium",
+    "description": "Whiteflies are small, flying insects that feed on plant sap and can transmit viral diseases. They are particularly problematic in warm climates and greenhouse environments.",
+    "symptoms": [
+      "Small, white flying insects around plants",
+      "Sticky honeydew on leaves",
+      "Yellowing and wilting of leaves",
+      "Stunted plant growth",
+      "Sooty mold on honeydew",
+      "Virus transmission symptoms"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Yellow sticky traps",
+          "dosage": "1 trap per 100 square feet",
+          "frequency": "Replace when full",
+          "safety": "Completely safe physical control method."
+        },
+        {
+          "name": "Insecticidal soap",
+          "dosage": "2-3 tablespoons per gallon",
+          "frequency": "Every 3-5 days",
+          "safety": "Safe for beneficial insects when dry."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Imidacloprid",
+          "dosage": "Follow label instructions",
+          "frequency": "One application provides long control",
+          "safety": "Toxic to pollinators. Do not apply to flowering plants."
+        }
+      ],
+      "preventive": [
+        "Use reflective mulches",
+        "Install fine mesh screens",
+        "Remove weedy hosts",
+        "Monitor regularly with sticky traps",
+        "Quarantine new plants",
+        "Maintain proper plant spacing"
+      ]
+    },
+    "aliases": ["silverleaf whitefly", "greenhouse whitefly"],
+    "affected_crops": ["tomatoes", "peppers", "cucumbers", "beans", "ornamentals"],
+    "environmental_factors": ["warm temperatures", "protected environments", "dense plantings"],
+    "spread_rate": "rapid reproduction"
+  },
+  "thrips": {
+    "scientific_name": "Frankliniella occidentalis",
+    "severity": "Medium",
+    "description": "Thrips are tiny, slender insects that feed by rasping leaf surfaces and sucking plant juices. They can transmit tospoviruses and cause significant damage to young plants.",
+    "symptoms": [
+      "Silver or bronze streaks on leaves",
+      "Black specks (thrips excrement) on leaves",
+      "Distorted or curled leaves",
+      "Scarring on fruits",
+      "Stunted plant growth",
+      "Virus symptoms if present"
+    ],
+    "treatments": {
+      "organic": [
+        {
+          "name": "Blue sticky traps",
+          "dosage": "1 trap per 100 square feet",
+          "frequency": "Replace weekly",
+          "safety": "Safe physical control method."
+        },
+        {
+          "name": "Predatory mites",
+          "dosage": "Follow supplier recommendations",
+          "frequency": "One release",
+          "safety": "Completely safe biological control."
+        }
+      ],
+      "chemical": [
+        {
+          "name": "Spinosad",
+          "dosage": "As per label directions",
+          "frequency": "Every 7-10 days",
+          "safety": "Low toxicity to mammals. Apply in evening to protect bees."
+        }
+      ],
+      "preventive": [
+        "Remove weeds and plant debris",
+        "Use reflective mulches",
+        "Monitor with sticky traps",
+        "Quarantine new plants",
+        "Maintain proper humidity levels",
+        "Avoid over-fertilizing with nitrogen"
+      ]
+    },
+    "aliases": ["western flower thrips", "onion thrips"],
+    "affected_crops": ["vegetables", "flowers", "fruits", "ornamentals"],
+    "environmental_factors": ["warm temperatures", "dry conditions", "dense vegetation"],
+    "spread_rate": "moderate to rapid"
+  }
+}
